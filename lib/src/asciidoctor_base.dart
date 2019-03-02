@@ -88,6 +88,7 @@ class Parser {
 
     return words;
   }
+  
   List<ANode> parseInline(List<String> words){
     List<ANode> child = [];
     var upperToken = config.get('upperToken');
@@ -134,9 +135,6 @@ class Parser {
     } while (i < words.length);
     return null;
   }
-
-
-
 
   Stream<String> textLineStream(String text) async* {
     for(var line in text.split(RegExp('\n'))) {
